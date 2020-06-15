@@ -23,18 +23,18 @@ corpus = tm_map(corpus, stemDocument)
 corpus = tm_map(corpus, stripWhitespace)
 
 Spc <- content_transformer(function(x, pattern) gsub(pattern, " ", x))
-corpus <- tm_map(corpus, Spc, "â") 
+corpus <- tm_map(corpus, Spc, "Ã¢") 
 corpus <- tm_map(corpus, Spc, "@")
 corpus <- tm_map(corpus, Spc, "<")
 corpus <- tm_map(corpus, Spc, "~")
 corpus <- tm_map(corpus, Spc, "#")
 corpus <- tm_map(corpus, Spc, "Y")
-corpus <- tm_map(corpus, Spc, "ð")
-corpus <- tm_map(corpus, Spc, "®")
+corpus <- tm_map(corpus, Spc, "Ã°")
+corpus <- tm_map(corpus, Spc, "Â®")
 corpus <- tm_map(corpus, Spc, "???")
 corpus <- tm_map(corpus, Spc, "T")
 corpus <- tm_map(corpus, Spc, "%")
-corpus <- tm_map(corpus, Spc, "ã")
+corpus <- tm_map(corpus, Spc, "Ã£")
 corpus <- tm_map(corpus, Spc, ">")
 corpus = tm_map(corpus, stripWhitespace)
 
@@ -67,3 +67,5 @@ submit<-data.frame(id = sample_submission$id, target = Pred)
 
 # writing the data to Submit file
 #write.csv(submit, file = "Submission.csv",row.names=FALSE)
+                           
+# Public Score - 0.76
